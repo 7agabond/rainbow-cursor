@@ -1,5 +1,5 @@
 html {
-    /* cursor: none; */
+    cursor: none;
     overflow: hidden;
 }
 
@@ -19,5 +19,22 @@ body {
         width: 200px;
         aspect-ratio: 1;
         background: white;
+        border-radius: 50%;
+        filter: blur(2rem);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle, lime, transparent 30%), conic-gradient(red, blue, green, yellow, purple, magenta, cyan, yellow, orangered, red);
+        animation: rotateHue 10s linear infinite;
+        mix-blend-mode: color-burn;
+    }
+}
+
+@keyframes rotateHue {
+    to {
+        filter: hue-rotate(360deg);
     }
 }
