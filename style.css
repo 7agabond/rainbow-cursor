@@ -1,0 +1,23 @@
+html {
+    /* cursor: none; */
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    min-block-size: 100svh;
+    background: black;
+}
+
+.cursor {
+    &::before {
+        content: "";
+        position: absolute;
+        left: var(--x, 0px);
+        top: var(--y, 0px);
+        translate: -50% -50%;
+        width: 200px;
+        aspect-ratio: 1;
+        background: white;
+    }
+}
