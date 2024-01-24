@@ -6,7 +6,3 @@ document.addEventListener("mousemove", (e) => {
     cursor.style.setProperty("--x", x + "px");
     cursor.style.setProperty("--y", y + "px");
 })
-// 
-// 
-// 
-// 
